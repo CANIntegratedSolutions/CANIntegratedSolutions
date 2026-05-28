@@ -98,7 +98,7 @@ export default function HomePage() {
                 </div>
             </section>
 
-            {/* 3. CORE VALUES / WHY CHOOSE US (New Graphics Section) */}
+            {/* 3. CORE VALUES / WHY CHOOSE US */}
             <section className="w-full bg-can-white py-24">
                 <div className="max-w-7xl mx-auto px-8">
                     <div className="text-center mb-16">
@@ -112,18 +112,39 @@ export default function HomePage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {/* Feature 1 */}
-                        <img src="/can_engineers_team.jpg" alt="Professionalism" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <div className="flex flex-col items-center text-center group">
+                            <div className="w-full h-[250px] rounded-2xl overflow-hidden mb-6 shadow-soft relative">
+                                <img src="/can_engineers_team.jpg" alt="Professionalism" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                <div className="absolute inset-0 bg-can-dark-green/20 group-hover:bg-transparent transition-colors duration-300"></div>
+                            </div>
+                            <h3 className="text-xl font-extrabold text-can-dark-green mb-3">Professionalism</h3>
+                            <p className="text-sm font-medium text-can-text-dark">Expert execution in project management, monitoring, and structural integrity across every unit.</p>
+                        </div>
 
                         {/* Feature 2 */}
-                        <img src="/can_architecture.jpg" alt="Innovation" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <div className="flex flex-col items-center text-center group">
+                            <div className="w-full h-[250px] rounded-2xl overflow-hidden mb-6 shadow-soft relative">
+                                <img src="/can_architecture.jpg" alt="Innovation" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                <div className="absolute inset-0 bg-can-dark-green/20 group-hover:bg-transparent transition-colors duration-300"></div>
+                            </div>
+                            <h3 className="text-xl font-extrabold text-can-dark-green mb-3">Innovation</h3>
+                            <p className="text-sm font-medium text-can-text-dark">Utilizing smart digital tools and modern sustainable practices for infrastructure and facilities.</p>
+                        </div>
 
                         {/* Feature 3 */}
-                        <img src="/can_modern_agric.jpg" alt="Excellence" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <div className="flex flex-col items-center text-center group">
+                            <div className="w-full h-[250px] rounded-2xl overflow-hidden mb-6 shadow-soft relative">
+                                <img src="/can_modern_agric.jpg" alt="Excellence" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                <div className="absolute inset-0 bg-can-dark-green/20 group-hover:bg-transparent transition-colors duration-300"></div>
+                            </div>
+                            <h3 className="text-xl font-extrabold text-can-dark-green mb-3">Excellence</h3>
+                            <p className="text-sm font-medium text-can-text-dark">Deeply committed to delivering value-added, total quality services for long-term impact.</p>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* 4. PRODUCTS & SERVICES SUMMARY (New Section) */}
+            {/* 4. PRODUCTS & SERVICES SUMMARY */}
             <section className="w-full max-w-7xl mx-auto px-8 py-24">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-12">
                     <div>
@@ -151,13 +172,13 @@ export default function HomePage() {
                         <span className="mt-auto text-can-lime-green font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all">Explore <i className="fa-solid fa-chevron-right text-xs"></i></span>
                     </Link>
 
-                    {/* Service Link 2 */}
+                    {/* Service Link 2 (Updated to Cleaning Services) */}
                     <Link href="/services" className="bg-can-white rounded-2xl p-8 border border-gray-100 shadow-soft hover:shadow-strong hover:border-can-lime-green transition-all group flex flex-col items-start">
                         <span className="w-14 h-14 bg-can-bg-light text-can-lime-green rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-can-lime-green group-hover:text-can-dark-green transition-colors">
-                            <i className="fa-solid fa-city"></i>
+                            <i className="fa-solid fa-broom"></i>
                         </span>
-                        <h3 className="text-xl font-extrabold text-can-dark-green mb-3">Real Estate Development</h3>
-                        <p className="text-sm font-medium text-can-text-dark mb-6">Premium residential and commercial property development.</p>
+                        <h3 className="text-xl font-extrabold text-can-dark-green mb-3">Cleaning Services</h3>
+                        <p className="text-sm font-medium text-can-text-dark mb-6">Comprehensive commercial, industrial, and post-construction cleaning solutions.</p>
                         <span className="mt-auto text-can-lime-green font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all">Explore <i className="fa-solid fa-chevron-right text-xs"></i></span>
                     </Link>
 
