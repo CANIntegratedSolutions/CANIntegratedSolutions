@@ -13,8 +13,8 @@ export default function Footer() {
                 {/* Left Section: Contact Info */}
                 <div className="flex-1 flex flex-col justify-center">
                     <h2 className="text-6xl md:text-7xl font-black text-can-white leading-none tracking-tight mb-10">
-                        Thank<br />
-                        <span className="text-can-lime-green">You</span>
+                        Partner<br />
+                        <span className="text-can-lime-green">with us</span>
                     </h2>
 
                     <ul className="flex flex-col gap-4 list-none p-0">
