@@ -10,14 +10,14 @@ export default function Footer() {
 
             <div className="w-full max-w-7xl mx-auto px-8 py-20 flex flex-col md:flex-row gap-16 relative z-10">
 
-                {/* Left Section: Contact & RC Info */}
+                {/* Left Section: Contact Info */}
                 <div className="flex-1 flex flex-col justify-center">
                     <h2 className="text-6xl md:text-7xl font-black text-can-white leading-none tracking-tight mb-10">
                         Partner<br />
                         <span className="text-can-lime-green">with us</span>
                     </h2>
 
-                    <ul className="flex flex-col gap-4 mb-10 list-none p-0">
+                    <ul className="flex flex-col gap-4 list-none p-0">
                         <li className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10 text-sm font-semibold break-words">
                             <span className="w-10 h-10 min-w-[40px] bg-can-white text-can-lime-green flex items-center justify-center rounded-full text-lg">
                                 <i className="fa-solid fa-location-dot"></i>
@@ -28,23 +28,15 @@ export default function Footer() {
                             <span className="w-10 h-10 min-w-[40px] bg-can-white text-can-lime-green flex items-center justify-center rounded-full text-lg">
                                 <i className="fa-solid fa-phone"></i>
                             </span>
-                            <span>+234 705 780 1153</span>
+                            <span>0816 294 7898</span>
                         </li>
                         <li className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10 text-sm font-semibold break-words">
                             <span className="w-10 h-10 min-w-[40px] bg-can-white text-can-lime-green flex items-center justify-center rounded-full text-lg">
                                 <i className="fa-solid fa-envelope"></i>
                             </span>
-                            <span>canintegratedsolutions@gmail.com</span>
+                            <span>alvinnwokedi@gmail.com</span>
                         </li>
                     </ul>
-
-                    <div className="bg-black/20 p-6 rounded-xl border-l-4 border-can-lime-green text-sm text-[#e0e0e0] leading-relaxed font-medium">
-                        <div className="mb-1"><strong className="text-can-white w-44 inline-block">Company Name:</strong> CAN INTEGRATED SOLUTIONS LTD</div>
-                        <div className="mb-1"><strong className="text-can-white w-44 inline-block">RC Number:</strong> 9221490</div>
-                        <div className="mb-1"><strong className="text-can-white w-44 inline-block">Company Type:</strong> Private Company Limited by Shares</div>
-                        <div className="mb-1"><strong className="text-can-white w-44 inline-block">Date of Registration:</strong> January 16, 2026</div>
-                        <div><strong className="text-can-white w-44 inline-block">Status:</strong> Active</div>
-                    </div>
                 </div>
 
                 {/* Right Section: Visual / Logo */}

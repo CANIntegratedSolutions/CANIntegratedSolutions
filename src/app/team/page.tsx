@@ -107,7 +107,7 @@ export default function TeamPage() {
                 Key Professionals
             </h2>
 
-            {/* Grid 2x2 - Key Professionals */}
+            {/* Grid - Key Professionals */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
 
                 {/* Team Member 4 */}
@@ -214,6 +214,33 @@ export default function TeamPage() {
                             <li className="relative pl-[26px] font-medium"><i className="fa-solid fa-circle-check absolute left-0 top-[5px] text-can-lime-green text-sm"></i> Streamlines internal workflows using <strong>smart digital tools</strong>.</li>
                             <li className="relative pl-[26px] font-medium"><i className="fa-solid fa-circle-check absolute left-0 top-[5px] text-can-lime-green text-sm"></i> Ensures strong <strong>data security and system reliability</strong>.</li>
                             <li className="relative pl-[26px] font-medium"><i className="fa-solid fa-circle-check absolute left-0 top-[5px] text-can-lime-green text-sm"></i> Holds a B.Tech. in Computer Science with cybersecurity training.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                {/* Team Member 8 - New Executive Assistant */}
+                <div className="bg-can-white rounded-2xl shadow-soft flex flex-col relative overflow-hidden h-full">
+                    <div className="h-[90px] bg-gradient-can absolute top-0 left-0 w-full z-0"></div>
+
+                    <div className="relative z-10 pt-[20px] flex justify-center">
+                        <img
+                            src="/can_assistant.jpg"
+                            alt="Olaoluwa Fawaz Omoyebi"
+                            className="w-[140px] h-[140px] object-cover rounded-full border-[5px] border-can-white shadow-soft bg-can-white"
+                        />
+                    </div>
+
+                    <div className="relative z-10 px-6 pt-4 pb-5 border-b border-gray-100 text-center bg-can-white">
+                        <h3 className="m-0 text-xl text-can-dark-green font-black leading-tight">Olaoluwa Fawaz Omoyebi</h3>
+                        <p className="mt-2 mb-0 text-xs text-can-lime-green font-extrabold uppercase tracking-wide">Executive Assistant to the CEO</p>
+                    </div>
+
+                    <div className="relative z-10 p-8 text-can-text-dark text-[15px] leading-relaxed flex-grow bg-can-white">
+                        <ul className="m-0 p-0 list-none flex flex-col gap-4">
+                            <li className="relative pl-[26px] font-medium"><i className="fa-solid fa-circle-check absolute left-0 top-[5px] text-can-lime-green text-sm"></i> Detail-oriented professional with a <strong>B.Sc. in Statistics</strong>.</li>
+                            <li className="relative pl-[26px] font-medium"><i className="fa-solid fa-circle-check absolute left-0 top-[5px] text-can-lime-green text-sm"></i> Deep experience in <strong>operations support and performance reporting</strong>.</li>
+                            <li className="relative pl-[26px] font-medium"><i className="fa-solid fa-circle-check absolute left-0 top-[5px] text-can-lime-green text-sm"></i> Drives data accuracy, administrative coordination, and content management.</li>
+                            <li className="relative pl-[26px] font-medium"><i className="fa-solid fa-circle-check absolute left-0 top-[5px] text-can-lime-green text-sm"></i> Proficient in <strong>Excel, Google Sheets, Python, and MySQL</strong>.</li>
                         </ul>
                     </div>
                 </div>

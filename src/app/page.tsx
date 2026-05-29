@@ -69,7 +69,7 @@ export default function HomePage() {
                                 <i className="fa-solid fa-eye text-can-lime-green"></i> Our Vision
                             </h4>
                             <p className="text-sm font-medium text-can-text-dark leading-relaxed">
-                                To become a leading integrated solutions company in Nigeria, recognized for excellence, innovation, reliability, and sustainable practices.
+                                To become a leading agriculture, real estate and supply/ facility management integrated solutions company in Nigeria, recognized for excellence, innovation, reliability, and sustainable practices.
                             </p>
                         </div>
 
@@ -172,7 +172,7 @@ export default function HomePage() {
                         <span className="mt-auto text-can-lime-green font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all">Explore <i className="fa-solid fa-chevron-right text-xs"></i></span>
                     </Link>
 
-                    {/* Service Link 2 (Updated to Cleaning Services) */}
+                    {/* Service Link 2 */}
                     <Link href="/services" className="bg-can-white rounded-2xl p-8 border border-gray-100 shadow-soft hover:shadow-strong hover:border-can-lime-green transition-all group flex flex-col items-start">
                         <span className="w-14 h-14 bg-can-bg-light text-can-lime-green rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-can-lime-green group-hover:text-can-dark-green transition-colors">
                             <i className="fa-solid fa-broom"></i>

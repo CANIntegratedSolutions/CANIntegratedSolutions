@@ -1,10 +1,6 @@
 export default function ContactPage() {
     return (
         <div className="w-full flex-grow flex items-stretch">
-            {/* 
-        This page acts as a standalone representation of Slide 8, 
-        giving the contact details their own dedicated full-page view.
-      */}
             <section className="w-full flex flex-col md:flex-row bg-can-dark-green min-h-[calc(100vh-80px)] overflow-hidden relative">
 
                 {/* Decorative Brand Bars */}
@@ -21,7 +17,7 @@ export default function ContactPage() {
                         <span className="text-can-lime-green">Touch</span>
                     </h1>
 
-                    <ul className="flex flex-col gap-4 mb-10 list-none p-0">
+                    <ul className="flex flex-col gap-4 list-none p-0 max-w-xl">
                         <li className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10 text-[14px] font-semibold break-words text-can-white">
                             <span className="w-10 h-10 min-w-[40px] bg-can-white text-can-lime-green flex items-center justify-center rounded-full text-lg">
                                 <i className="fa-solid fa-location-dot"></i>
@@ -32,23 +28,15 @@ export default function ContactPage() {
                             <span className="w-10 h-10 min-w-[40px] bg-can-white text-can-lime-green flex items-center justify-center rounded-full text-lg">
                                 <i className="fa-solid fa-phone"></i>
                             </span>
-                            <span>+234 705 780 1153</span>
+                            <span>0816 294 7898</span>
                         </li>
                         <li className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10 text-[14px] font-semibold break-words text-can-white">
                             <span className="w-10 h-10 min-w-[40px] bg-can-white text-can-lime-green flex items-center justify-center rounded-full text-lg">
                                 <i className="fa-solid fa-envelope"></i>
                             </span>
-                            <span>canintegratedsolutions@gmail.com</span>
+                            <span>alvinnwokedi@gmail.com</span>
                         </li>
                     </ul>
-
-                    <div className="bg-black/20 p-6 rounded-xl border-l-[5px] border-can-lime-green text-[13px] text-[#e0e0e0] leading-[1.8] font-medium shadow-soft max-w-xl">
-                        <div><strong className="text-can-white w-[170px] inline-block">Company Name:</strong> CAN INTEGRATED SOLUTIONS LTD</div>
-                        <div><strong className="text-can-white w-[170px] inline-block">RC Number:</strong> 9221490</div>
-                        <div><strong className="text-can-white w-[170px] inline-block">Company Type:</strong> Private Company Limited by Shares</div>
-                        <div><strong className="text-can-white w-[170px] inline-block">Date of Registration:</strong> January 16, 2026</div>
-                        <div><strong className="text-can-white w-[170px] inline-block">Status:</strong> Active</div>
-                    </div>
                 </div>
 
                 {/* Right Angled Panel Area */}
