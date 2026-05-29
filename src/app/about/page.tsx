@@ -88,9 +88,13 @@ export default function AboutPage() {
                             <span className="block text-[11px] text-can-med-green font-extrabold uppercase mb-1">Finance Officer</span>
                             <span className="block text-sm text-can-text-dark font-bold">Precious Emordi</span>
                         </li>
-                        <li className="bg-can-bg-light p-3 rounded-xl border-l-4 border-can-med-green md:col-span-2">
+                        <li className="bg-can-bg-light p-3 rounded-xl border-l-4 border-can-med-green">
                             <span className="block text-[11px] text-can-med-green font-extrabold uppercase mb-1">Head of IT Operations</span>
                             <span className="block text-sm text-can-text-dark font-bold">Matthew Tedunjaiye</span>
+                        </li>
+                        <li className="bg-can-bg-light p-3 rounded-xl border-l-4 border-can-med-green">
+                            <span className="block text-[11px] text-can-med-green font-extrabold uppercase mb-1">Executive Assistant to the CEO</span>
+                            <span className="block text-sm text-can-text-dark font-bold">Olaoluwa Fawaz Omoyebi</span>
                         </li>
                     </ul>
                 </div>
