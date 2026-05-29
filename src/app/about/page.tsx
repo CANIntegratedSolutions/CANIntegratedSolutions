@@ -1,6 +1,33 @@
 export default function AboutPage() {
     return (
         <div className="w-full max-w-7xl mx-auto px-8 py-16 flex flex-col">
+
+            {/* Vision & Mission Section */}
+            <h2 className="text-3xl md:text-4xl font-black text-can-dark-green uppercase tracking-tight mb-8 flex items-center gap-4">
+                <span className="block w-2 h-10 bg-can-lime-green rounded-md"></span>
+                Vision & Mission
+            </h2>
+
+            <div className="flex flex-col md:flex-row gap-6 mb-16">
+                <div className="flex-1 bg-can-white border-t-4 border-can-lime-green p-8 rounded-xl shadow-soft">
+                    <h4 className="text-xl font-extrabold text-can-dark-green flex items-center gap-3 mb-4">
+                        <i className="fa-solid fa-eye text-can-lime-green text-2xl"></i> Our Vision
+                    </h4>
+                    <p className="text-[15px] font-medium text-can-text-dark leading-relaxed m-0">
+                        To become a leading agriculture, real estate and supply/ facility management integrated solutions company in Nigeria, recognized for excellence, innovation, reliability, and sustainable practices.
+                    </p>
+                </div>
+
+                <div className="flex-1 bg-can-white border-t-4 border-can-lime-green p-8 rounded-xl shadow-soft">
+                    <h4 className="text-xl font-extrabold text-can-dark-green flex items-center gap-3 mb-4">
+                        <i className="fa-solid fa-bullseye text-can-lime-green text-2xl"></i> Our Mission
+                    </h4>
+                    <p className="text-[15px] font-medium text-can-text-dark leading-relaxed m-0">
+                        To provide high-quality integrated services through professionalism, efficiency, and customer-focused service delivery in every sector we operate.
+                    </p>
+                </div>
+            </div>
+
             <h2 className="text-3xl md:text-4xl font-black text-can-dark-green uppercase tracking-tight mb-8 flex items-center gap-4">
                 <span className="block w-2 h-10 bg-can-lime-green rounded-md"></span>
                 Corporate Structure

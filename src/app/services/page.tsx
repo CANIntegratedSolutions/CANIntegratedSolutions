@@ -68,10 +68,11 @@ export default function ServicesPage() {
         {
             id: 6,
             title: "Cleaning Services",
-            desc: "Comprehensive commercial, industrial, and post-construction cleaning solutions.",
+            desc: "Comprehensive home cleaning, commercial, industrial, and post-construction cleaning solutions.",
             image: "/can_cleaning.jpg",
             icon: "fa-broom",
             list: [
+                "Home cleaning",
                 "Post-construction cleaning",
                 "Commercial & office cleaning",
                 "Industrial waste management",

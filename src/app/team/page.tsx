@@ -144,13 +144,13 @@ export default function TeamPage() {
                     <div className="relative z-10 pt-[20px] flex justify-center">
                         <img
                             src="/can_finance_officer.jpg"
-                            alt="Precious Emordi"
+                            alt="Precious Emordi, A.C.A."
                             className="w-[140px] h-[140px] object-cover rounded-full border-[5px] border-can-white shadow-soft bg-can-white"
                         />
                     </div>
 
                     <div className="relative z-10 px-6 pt-4 pb-5 border-b border-gray-100 text-center bg-can-white">
-                        <h3 className="m-0 text-xl text-can-dark-green font-black leading-tight">Precious Emordi</h3>
+                        <h3 className="m-0 text-xl text-can-dark-green font-black leading-tight">Precious Emordi, A.C.A.</h3>
                         <p className="mt-2 mb-0 text-xs text-can-lime-green font-extrabold uppercase tracking-wide">Finance Officer</p>
                     </div>
 
