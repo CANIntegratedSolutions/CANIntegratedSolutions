@@ -24,17 +24,27 @@ export default function ContactPage() {
                             </span>
                             <span>2, West Road 7, Trans-Ekulu,<br />Enugu, Enugu State, Nigeria</span>
                         </li>
-                        <li className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10 text-[14px] font-semibold break-words text-can-white">
+                        <li className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10 text-[14px] font-semibold break-words text-can-white animate-fade-in">
                             <span className="w-10 h-10 min-w-[40px] bg-can-white text-can-lime-green flex items-center justify-center rounded-full text-lg">
                                 <i className="fa-solid fa-phone"></i>
                             </span>
-                            <span>0816 294 7898</span>
+                            <a
+                                href="tel:08162947898"
+                                className="hover:text-can-lime-green transition-colors duration-200"
+                            >
+                                0816 294 7898
+                            </a>
                         </li>
                         <li className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10 text-[14px] font-semibold break-words text-can-white">
                             <span className="w-10 h-10 min-w-[40px] bg-can-white text-can-lime-green flex items-center justify-center rounded-full text-lg">
                                 <i className="fa-solid fa-envelope"></i>
                             </span>
-                            <span>canintegratedservices@gmail.com</span>
+                            <a
+                                href="mailto:canintegratedservices@gmail.com"
+                                className="text-xs sm:text-sm break-all hover:text-can-lime-green transition-colors duration-200"
+                            >
+                                canintegratedservices@gmail.com
+                            </a>
                         </li>
                     </ul>
                 </div>

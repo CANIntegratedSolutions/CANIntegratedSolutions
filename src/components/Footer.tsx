@@ -13,8 +13,8 @@ export default function Footer() {
                 {/* Left Section: Contact Info */}
                 <div className="flex-1 flex flex-col justify-center">
                     <h2 className="text-6xl md:text-7xl font-black text-can-white leading-none tracking-tight mb-10">
-                        Partner<br />
-                        <span className="text-can-lime-green">with us</span>
+                        Thank<br />
+                        <span className="text-can-lime-green">You</span>
                     </h2>
 
                     <ul className="flex flex-col gap-4 list-none p-0">
@@ -28,13 +28,23 @@ export default function Footer() {
                             <span className="w-10 h-10 min-w-[40px] bg-can-white text-can-lime-green flex items-center justify-center rounded-full text-lg">
                                 <i className="fa-solid fa-phone"></i>
                             </span>
-                            <span>0816 294 7898</span>
+                            <a
+                                href="tel:08162947898"
+                                className="hover:text-can-lime-green transition-colors duration-200"
+                            >
+                                0816 294 7898
+                            </a>
                         </li>
                         <li className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10 text-sm font-semibold break-words">
                             <span className="w-10 h-10 min-w-[40px] bg-can-white text-can-lime-green flex items-center justify-center rounded-full text-lg">
                                 <i className="fa-solid fa-envelope"></i>
                             </span>
-                            <span>canintegratedservices@gmail.com</span>
+                            <a
+                                href="mailto:canintegratedservices@gmail.com"
+                                className="text-xs sm:text-sm break-all hover:text-can-lime-green transition-colors duration-200"
+                            >
+                                canintegratedservices@gmail.com
+                            </a>
                         </li>
                     </ul>
                 </div>
