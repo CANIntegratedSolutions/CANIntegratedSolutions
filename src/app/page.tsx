@@ -46,7 +46,7 @@ export default function HomePage() {
                 <div className="w-full lg:w-3/5 flex flex-col justify-center">
                     <h2 className="text-3xl md:text-4xl font-black text-can-dark-green uppercase tracking-tight mb-8 flex items-center gap-4">
                         <span className="block w-2 h-10 bg-can-lime-green rounded-md"></span>
-                        Executive Summary
+                        Who we are
                     </h2>
 
                     <p className="text-base text-can-text-dark leading-relaxed mb-6 font-medium text-justify">
