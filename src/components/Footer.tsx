@@ -34,7 +34,7 @@ export default function Footer() {
                             <span className="w-10 h-10 min-w-[40px] bg-can-white text-can-lime-green flex items-center justify-center rounded-full text-lg">
                                 <i className="fa-solid fa-envelope"></i>
                             </span>
-                            <span>alvinnwokedi@gmail.com</span>
+                            <span>canintegratedservices@gmail.com</span>
                         </li>
                     </ul>
                 </div>
