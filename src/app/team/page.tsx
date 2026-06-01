@@ -36,7 +36,7 @@ export default function TeamPage() {
                         <p className="m-0 mb-5 font-bold text-can-dark-green text-[15px] text-center">Dynamic leader driving innovation, operations, and growth.</p>
                         <ul className="m-0 p-0 list-none flex flex-col gap-4">
                             <li className="relative pl-[24px] font-medium"><i className="fa-solid fa-circle-check absolute left-0 top-[4px] text-can-lime-green"></i> <strong>15+ years experience</strong> in public & corporate ops.</li>
-                            <li className="relative pl-[24px] font-medium"><i className="fa-solid fa-circle-check absolute left-0 top-[4px] text-can-lime-green"></i> Expert in org development & data-driven strategy.</li>
+                            <li className="relative pl-[24px] font-medium"><i className="fa-solid fa-circle-check absolute left-0 top-[4px] text-can-lime-green"></i> Expert in organization development & data-driven strategy.</li>
                             <li className="relative pl-[24px] font-medium"><i className="fa-solid fa-circle-check absolute left-0 top-[4px] text-can-lime-green"></i> Optimizes workforce for long-term performance.</li>
                             <li className="relative pl-[24px] font-medium"><i className="fa-solid fa-circle-check absolute left-0 top-[4px] text-can-lime-green"></i> Certified in <strong>HR, Data Analysis & PM</strong>.</li>
                         </ul>
