@@ -8,7 +8,6 @@
 
 # testing
 /coverage
-/docs
 repomix-output.xml
 
 # next.js
