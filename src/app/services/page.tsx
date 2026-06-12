@@ -28,7 +28,7 @@ export default function ServicesPage() {
         },
         {
             id: 3,
-            title: "Property & Facility Mgmt",
+            title: "Property & Facility Management",
             desc: "Maximizing asset value through efficient maintenance and operations.",
             image: "/can_engineer.jpg",
             icon: "fa-helmet-safety",

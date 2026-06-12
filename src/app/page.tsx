@@ -165,7 +165,7 @@ export default function HomePage() {
                         <span className="w-14 h-14 bg-can-bg-light text-can-lime-green rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-can-lime-green group-hover:text-can-dark-green transition-colors">
                             <i className="fa-solid fa-briefcase"></i>
                         </span>
-                        <h3 className="text-xl font-extrabold text-can-dark-green mb-3">General Contracts & Mgmt</h3>
+                        <h3 className="text-xl font-extrabold text-can-dark-green mb-3">General Contracts & Management</h3>
                         <p className="text-sm font-medium text-can-text-dark mb-6">Procurement, facility maintenance, and business support.</p>
                         <span className="mt-auto text-can-lime-green font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all">Explore <i className="fa-solid fa-chevron-right text-xs"></i></span>
                     </Link>
