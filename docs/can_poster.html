@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAN Integrated Solutions - Cleaning Services Poster</title>
+    <!-- Import Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Import FontAwesome for Graphic Elements & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            /* CAN Theme Palette */
+            --dark-green: #144C1B;
+            --lime-green: #7CC704;
+            --med-green: #286C0B;
+            --white: #FFFFFF;
+            --text-dark: #222222;
+            --text-light: #666666;
+            --bg-light: #F4F7F4;
+            /* Derived Shadows for depth */
+            --shadow-soft: 0 10px 30px rgba(20, 76, 27, 0.08);
+            --shadow-strong: 0 15px 40px rgba(20, 76, 27, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px;
+            background-color: #c9d1cc;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* EXACT A4 PROPORTIONS (950 x 1343) - Zero Border Radius */
+        .poster {
+            width: 950px;
+            height: 1343px;
+            background-color: var(--bg-light);
+            background-image:
+                radial-gradient(circle at 100% 0%, rgba(124, 199, 4, 0.15), transparent 50%),
+                radial-gradient(circle at 0% 100%, rgba(20, 76, 27, 0.1), transparent 50%),
+                url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23144C1B' fill-opacity='0.04' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+            border-radius: 0;
+            /* PERFECTLY SHARP EDGES */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* --- PRINT OPTIMIZATION RULES --- */
+        @media print {
+            body {
+                background-color: transparent;
+                padding: 0 !important;
+            }
+
+            .poster {
+                margin: 0 !important;
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        /* --- Watermark --- */
+        .watermark {
+            position: absolute;
+            font-size: 600px;
+            color: rgba(20, 76, 27, 0.02);
+            z-index: 0;
+            top: 25%;
+            left: -150px;
+            transform: rotate(-15deg);
+            pointer-events: none;
+        }
+
+        /* --- HEADER SECTION --- */
+        .header {
+            position: relative;
+            background: var(--dark-green);
+            padding: 30px 45px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1;
+            border-bottom: 4px solid var(--lime-green);
+        }
+
+        .header-content {
+            width: 65%;
+            z-index: 2;
+        }
+
+        .logo-container {
+            width: 120px;
+            margin-bottom: 15px;
+            background: var(--white);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: var(--shadow-strong);
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .header h1 {
+            color: var(--white);
+            font-size: 42px;
+            font-weight: 900;
+            line-height: 1.15;
+            margin: 0 0 15px 0;
+            letter-spacing: -1px;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .header h1 span {
+            color: var(--lime-green);
+        }
+
+        .tagline-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--lime-green);
+            color: var(--dark-green);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 800;
+            box-shadow: 0 6px 15px rgba(124, 199, 4, 0.3);
+        }
+
+        .header-image {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 55%;
+            height: 100%;
+            clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+            background-image: url('can_cleaning_hero.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
+
+        .header-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(20, 76, 27, 1) 0%, rgba(20, 76, 27, 0.85) 30%, rgba(20, 76, 27, 0) 65%);
+        }
+
+        /* --- SERVICES BODY SECTION --- */
+        .services-container {
+            padding: 20px 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            z-index: 2;
+            flex-grow: 1;
+            justify-content: center;
+        }
+
+        .service-card {
+            display: flex;
+            background: var(--white);
+            border-radius: 14px;
+            border: 1px solid rgba(20, 76, 27, 0.1);
+            border-left: 8px solid var(--lime-green);
+            box-shadow: var(--shadow-strong);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(20, 76, 27, 0.2);
+        }
+
+        .card-standard {
+            border-left-color: var(--med-green);
+        }
+
+        .card-deep {
+            border-left-color: var(--dark-green);
+        }
+
+        /* Left: Title & Icon */
+        .card-left {
+            flex: 0 0 160px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(124, 199, 4, 0.1) 0%, rgba(124, 199, 4, 0.02) 100%);
+            border-right: 1px dashed rgba(0, 0, 0, 0.1);
+        }
+
+        .card-standard .card-left {
+            background: linear-gradient(180deg, rgba(40, 108, 11, 0.1) 0%, rgba(40, 108, 11, 0.02) 100%);
+        }
+
+        .card-deep .card-left {
+            background: linear-gradient(180deg, rgba(20, 76, 27, 0.1) 0%, rgba(20, 76, 27, 0.02) 100%);
+        }
+
+        .card-left i {
+            font-size: 36px;
+            color: var(--lime-green);
+            margin-bottom: 8px;
+        }
+
+        .card-standard .card-left i {
+            color: var(--med-green);
+        }
+
+        .card-deep .card-left i {
+            color: var(--dark-green);
+        }
+
+        .card-left h2 {
+            margin: 0 0 8px 0;
+            font-size: 17px;
+            font-weight: 900;
+            color: var(--dark-green);
+            line-height: 1.2;
+        }
+
+        .card-left .price-range {
+            font-size: 12px;
+            font-weight: 800;
+            color: var(--text-dark);
+            background: var(--white);
+            padding: 5px 10px;
+            border-radius: 20px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .card-deep .price-range {
+            background: var(--dark-green);
+            color: var(--lime-green);
+        }
+
+        /* Middle: Scope Details */
+        .card-middle {
+            flex: 1;
+            padding: 18px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* MORE ROUNDED SUBTITLE CORNERS */
+        .card-middle .subtitle {
+            font-size: 12px;
+            font-weight: 800;
+            color: var(--dark-green);
+            background: rgba(124, 199, 4, 0.2);
+            padding: 6px 12px;
+            border-radius: 12px;
+            display: inline-block;
+            margin: 0 0 10px 0;
+            align-self: flex-start;
+        }
+
+        .card-middle .scope-note {
+            font-size: 12.5px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin: 0 0 8px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding-bottom: 5px;
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 6px;
+        }
+
+        .checklist.two-col {
+            grid-template-columns: 1fr 1fr;
+            column-gap: 15px;
+        }
+
+        /* ROUNDED CORNERS ON SCOPE ITEMS */
+        .checklist li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 6px 10px 6px 8px;
+            background: rgba(124, 199, 4, 0.08);
+            border: 1px solid rgba(124, 199, 4, 0.2);
+            border-radius: 16px;
+            font-size: 11.5px;
+            font-weight: 600;
+            color: var(--dark-green);
+            line-height: 1.35;
+        }
+
+        .checklist li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--white);
+            background: var(--lime-green);
+            min-width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 9px;
+            flex-shrink: 0;
+            margin-top: 1px;
+            box-shadow: 0 2px 4px rgba(124, 199, 4, 0.4);
+        }
+
+        /* Right: Pricing Details */
+        .card-right {
+            flex: 0 0 250px;
+            padding: 18px 20px;
+            background: #fbfdfc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-left: 1px dashed rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .pricing-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12.5px;
+            font-weight: 700;
+            color: var(--text-dark);
+            border-bottom: 1px dotted rgba(0, 0, 0, 0.15);
+            padding-bottom: 5px;
+        }
+
+        .pricing-list li:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .pricing-list .price {
+            font-weight: 900;
+            color: var(--dark-green);
+            font-size: 13.5px;
+            background: rgba(124, 199, 4, 0.2);
+            padding: 3px 8px;
+            border-radius: 6px;
+            box-shadow: inset 0 0 0 1px rgba(124, 199, 4, 0.3);
+        }
+
+        .meta-info {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 2px dashed rgba(20, 76, 27, 0.15);
+            font-size: 10.5px;
+            font-weight: 700;
+            color: var(--text-light);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .meta-info span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .meta-info i {
+            color: var(--med-green);
+            font-size: 13px;
+        }
+
+        /* --- FOOTER SECTION (TIGHTENED VERTICAL SPACE) --- */
+        .poster-footer {
+            background-color: var(--dark-green);
+            color: var(--white);
+            padding: 15px 40px 20px 40px;
+            /* Reduced vertical padding */
+            display: flex;
+            flex-direction: column;
+            margin-top: auto;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            padding-bottom: 12px;
+            /* Reduced space */
+            margin-bottom: 12px;
+            /* Reduced space */
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .footer-brand i.fa-broom {
+            font-size: 30px;
+            color: var(--lime-green);
+        }
+
+        .footer-brand h3 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+
+        .footer-brand h3 span {
+            color: var(--lime-green);
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 2px;
+        }
+
+        /* SHRUNK TRUST BADGES */
+        .footer-badges {
+            display: flex;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 6px 12px;
+            /* Tighter padding */
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-badges .badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 10.5px;
+            /* Smaller font */
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .footer-badges .badge i {
+            color: var(--dark-green);
+            background: var(--lime-green);
+            width: 24px;
+            /* Smaller icon container */
+            height: 24px;
+            font-size: 11px;
+            /* Smaller icon */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            gap: 10px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 10.5px;
+            /* Adjusted font size for perfect fit */
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 10px 12px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            flex: 1;
+            min-width: 0;
+        }
+
+        .contact-item i {
+            color: var(--lime-green);
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .contact-item div {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            overflow-wrap: break-word;
+            width: 100%;
+        }
+
+        .contact-item strong {
+            font-size: 10px;
+            color: var(--lime-green);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="poster">
+        <!-- Background Decor -->
+        <i class="fa-solid fa-sparkles watermark"></i>
+
+        <!-- HEADER -->
+        <div class="header">
+            <div class="header-image"></div>
+
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="can_logo.jpg" alt="CAN Integrated Solutions Logo">
+                </div>
+
+                <h1>Keep Your Space <br><span>Fresh, Clean,</span><br>and Stress-Free</h1>
+
+                <div class="tagline-badge">
+                    Three Cleaning Services. One Trusted Team. <i class="fa-solid fa-circle-check"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- SERVICES CARDS -->
+        <div class="services-container">
+
+            <!-- TIER 1: LIGHT CLEANING -->
+            <div class="service-card">
+                <div class="card-left">
+                    <i class="fa-solid fa-broom"></i>
+                    <h2>Light<br>Cleaning</h2>
+                    <div class="price-range">(₦12k - ₦22k)</div>
+                </div>
+
+                <div class="card-middle">
+                    <span class="subtitle">Perfect for quick upkeep & tidy spaces</span>
+                    <ul class="checklist">
+                        <li>Sweeping & dusting</li>
+                        <li>Wiping surfaces</li>
+                        <li>Trash removal</li>
+                        <li>Basic bathroom & sink cleaning</li>
+                    </ul>
+                </div>
+
+                <div class="card-right">
+                    <ul class="pricing-list">
+                        <li><span>Self Contain:</span> <span class="price">₦12,000</span></li>
+                        <li><span>1 Bedroom:</span> <span class="price">₦15,000</span></li>
+                        <li><span>2 Bedroom:</span> <span class="price">₦18,000</span></li>
+                        <li><span>3 Bedroom:</span> <span class="price">₦22,000</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- TIER 2: STANDARD CLEANING -->
+            <div class="service-card card-standard">
+                <div class="card-left">
+                    <i class="fa-solid fa-house-chimney"></i>
+                    <h2>Standard<br>Cleaning</h2>
+                    <div class="price-range">(₦18k - ₦55k)</div>
+                </div>
+
+                <div class="card-middle">
+                    <span class="subtitle">Best for: Weekly / biweekly residential cleaning</span>
+                    <p class="scope-note">Scope: Everything in Light Cleaning plus:</p>
+                    <ul class="checklist two-col">
+                        <li>Thorough dusting (furniture, shelves, fixtures)</li>
+                        <li>Proper mopping of floors</li>
+                        <li>Cleaning kitchen surfaces + sink</li>
+                        <li>Wiping appliance exteriors</li>
+                        <li>Bathroom cleaning (toilet, sink, mirrors, shower)</li>
+                        <li>Light interior microwave</li>
+                    </ul>
+                </div>
+
+                <div class="card-right">
+                    <ul class="pricing-list">
+                        <li><span>Self-contained / Studio:</span> <span class="price">₦18,000</span></li>
+                        <li><span>1 Bedroom:</span> <span class="price">₦22,000</span></li>
+                        <li><span>2 Bedroom:</span> <span class="price">₦30,000</span></li>
+                        <li><span>3 Bedroom:</span> <span class="price">₦40,000</span></li>
+                        <li><span>4 Bedroom:</span> <span class="price">₦55,000</span></li>
+                    </ul>
+                    <div class="meta-info">
+                        <span><i class="fa-solid fa-clock"></i> Time expectation: Moderate</span>
+                        <span><i class="fa-solid fa-calendar-check"></i> Frequency: Weekly / Biweekly</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TIER 3: DEEP CLEANING -->
+            <div class="service-card card-deep">
+                <div class="card-left">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <h2>Deep<br>Cleaning</h2>
+                    <div class="price-range">Premium Service</div>
+                </div>
+
+                <div class="card-middle">
+                    <span class="subtitle">Best for: First-time cleaning, inspections, very dirty spaces</span>
+                    <p class="scope-note">Scope: Everything in Standard Cleaning plus:</p>
+                    <ul class="checklist two-col">
+                        <li>Scrubbing tiles and grout</li>
+                        <li>Cleaning behind / under movable furniture</li>
+                        <li>Cleaning inside appliances (fridge, oven, cabinets)</li>
+                        <li>Detailed bathroom descaling (soap scum, hard water)</li>
+                        <li>Washing doors, frames, skirting, vents</li>
+                        <li>Removing built-up dirt and tough stains</li>
+                    </ul>
+                </div>
+
+                <div class="card-right">
+                    <ul class="pricing-list">
+                        <li><span>Self-contained / Studio:</span> <span class="price">₦30,000</span></li>
+                        <li><span>1 Bedroom:</span> <span class="price">₦40,000</span></li>
+                        <li><span>2 Bedroom:</span> <span class="price">₦60,000</span></li>
+                        <li><span>3 Bedroom:</span> <span class="price">₦80,000</span></li>
+                        <li><span>4 Bedroom Duplex:</span> <span class="price">₦120,000+</span></li>
+                    </ul>
+                    <div class="meta-info">
+                        <span><i class="fa-solid fa-clock"></i> Time expectation: Long</span>
+                        <span><i class="fa-solid fa-calendar-check"></i> Monthly / Quarterly / One-off</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- FOOTER / CONTACT INFO -->
+        <div class="poster-footer">
+
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <i class="fa-solid fa-broom"></i>
+                    <h3>CAN Integrated<br><span>Cleaning Division</span></h3>
+                </div>
+
+                <div class="footer-badges">
+                    <div class="badge">
+                        <i class="fa-solid fa-certificate"></i>
+                        <span>100% Satisfaction</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fa-solid fa-leaf"></i>
+                        <span>Eco-Friendly</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fa-solid fa-user-shield"></i>
+                        <span>Vetted Staff</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <div>
+                        <strong>Call Us Today</strong>
+                        0816 294 7898
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                    <div>
+                        <strong>Email Us</strong>
+                        canintegratedservices@gmail.com
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
