@@ -268,7 +268,6 @@
             justify-content: center;
         }
 
-        /* MORE ROUNDED SUBTITLE CORNERS */
         .card-middle .subtitle {
             font-size: 12px;
             font-weight: 800;
@@ -304,7 +303,6 @@
             column-gap: 15px;
         }
 
-        /* ROUNDED CORNERS ON SCOPE ITEMS */
         .checklist li {
             display: flex;
             align-items: flex-start;
@@ -406,12 +404,12 @@
             font-size: 13px;
         }
 
-        /* --- FOOTER SECTION (TIGHTENED VERTICAL SPACE) --- */
+        /* --- FOOTER SECTION --- */
         .poster-footer {
             background-color: var(--dark-green);
             color: var(--white);
-            padding: 15px 40px 20px 40px;
-            /* Reduced vertical padding */
+            /* Reduced overall top/bottom padding to secure elements inside */
+            padding: 12px 40px 15px 40px;
             display: flex;
             flex-direction: column;
             margin-top: auto;
@@ -423,10 +421,9 @@
             align-items: center;
             width: 100%;
             border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-            padding-bottom: 12px;
-            /* Reduced space */
-            margin-bottom: 12px;
-            /* Reduced space */
+            /* Minimized padding and margin around the divider line */
+            padding-bottom: 10px;
+            margin-bottom: 10px;
         }
 
         .footer-brand {
@@ -457,13 +454,11 @@
             margin-top: 2px;
         }
 
-        /* SHRUNK TRUST BADGES */
         .footer-badges {
             display: flex;
             gap: 10px;
             background: rgba(255, 255, 255, 0.05);
             padding: 6px 12px;
-            /* Tighter padding */
             border-radius: 8px;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
@@ -473,7 +468,6 @@
             align-items: center;
             gap: 6px;
             font-size: 10.5px;
-            /* Smaller font */
             font-weight: 600;
             color: rgba(255, 255, 255, 0.9);
         }
@@ -482,10 +476,8 @@
             color: var(--dark-green);
             background: var(--lime-green);
             width: 24px;
-            /* Smaller icon container */
             height: 24px;
             font-size: 11px;
-            /* Smaller icon */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -496,43 +488,55 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
-            gap: 10px;
+            gap: 20px;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-size: 10.5px;
-            /* Adjusted font size for perfect fit */
-            font-weight: 600;
+            justify-content: center;
+            gap: 12px;
             background: rgba(255, 255, 255, 0.08);
-            padding: 10px 12px;
-            border-radius: 10px;
+            padding: 12px 20px;
+            /* Kept tight to save vertical space */
+            border-radius: 12px;
             border: 1px solid rgba(255, 255, 255, 0.15);
             flex: 1;
-            min-width: 0;
         }
 
         .contact-item i {
             color: var(--lime-green);
-            font-size: 18px;
+            font-size: 24px;
+            /* Increased icon size slightly */
             flex-shrink: 0;
         }
 
-        .contact-item div {
+        .contact-item .contact-text {
             display: flex;
-            flex-direction: column;
-            gap: 2px;
-            overflow-wrap: break-word;
-            width: 100%;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
         }
 
         .contact-item strong {
-            font-size: 10px;
+            font-size: 11.5px;
             color: var(--lime-green);
             text-transform: uppercase;
             letter-spacing: 1px;
+        }
+
+        .contact-item span {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        /* HIGHLIGHTED/LARGER PHONE NUMBER */
+        .contact-item span.phone-number {
+            font-size: 17px;
+            /* Notably larger than the email */
+            letter-spacing: 0.5px;
+            color: var(--white);
         }
     </style>
 </head>
@@ -691,21 +695,25 @@
             </div>
 
             <div class="footer-bottom">
+
+                <!-- PHONE (LARGER) -->
                 <div class="contact-item">
                     <i class="fa-solid fa-phone-volume"></i>
-                    <div>
-                        <strong>Call Us Today</strong>
-                        0816 294 7898
+                    <div class="contact-text">
+                        <strong>Call Us:</strong>
+                        <span class="phone-number">0816 294 7898</span>
                     </div>
                 </div>
 
+                <!-- EMAIL -->
                 <div class="contact-item">
                     <i class="fa-solid fa-envelope-open-text"></i>
-                    <div>
-                        <strong>Email Us</strong>
-                        canintegratedservices@gmail.com
+                    <div class="contact-text">
+                        <strong>Email Us:</strong>
+                        <span>canintegratedservices@gmail.com</span>
                     </div>
                 </div>
+
             </div>
 
         </div>
